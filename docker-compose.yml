@@ -1,0 +1,26 @@
+version: "2"
+services:
+  client:
+    build: ./client
+    command: ["node", "."]
+    ports:
+      - 8080:8080
+    environment:
+      - API_URL
+    links:
+      - api
+  api:
+    build: ./api
+    command: ["node", "."]
+    ports:
+      - 3000:3000
+    environment:
+      - DB_URL
+    links:
+      - db
+  db:
+    image: convox/mongo
+    ports:
+      - 27017
+    environment:
+      - LINK_PATH=/i2r
