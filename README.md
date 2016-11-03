@@ -1,6 +1,6 @@
 # Convox Links Issue
 
-This repository demonstrates an issue with convox/rack.
+This repository demonstrates an issue with [convox/rack](https://github.com/convox/rack).
 
 ## What to do?
 
